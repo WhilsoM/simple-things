@@ -1,0 +1,100 @@
+.navbar {
+  position: relative;
+}
+
+.nav-link {
+  color: var(--gray-color);
+
+  &:hover {
+    opacity: 0.7;
+    transition: opacity 0.3s ease-in-out;
+  }
+}
+
+.last-elem:hover {
+  opacity: 0.7;
+  transition: opacity 0.3s ease-in-out;
+}
+
+
+.burger-menu {
+  display: block;
+  cursor: pointer;
+
+  position: relative;
+  z-index: 10;
+}
+
+.burger-menu div {
+  height: 2px;
+  background-color: #000;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+
+.line1, .line2, .line3 {
+  width: 25px;
+  height: 4px;
+  background-color: #000;
+  margin: 3px 0;
+}
+
+.nav.active {
+  display: flex;
+}
+
+.nav{
+  display: none;
+  flex-direction: column;
+  background-color: #333;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+  z-index: 9;
+  overflow: hidden;
+  gap: 40px;
+  li {
+    width: max-content;
+  }
+}
+.nav.open {
+  display: flex;
+}
+
+.burger-menu {
+  display: block;
+  cursor: pointer;
+}
+
+.burger-menu.open .line1 {
+  transform: rotate(-45deg) translate(-6px, 3px);
+}
+
+.burger-menu.open .line2 {
+  opacity: 0;
+}
+
+.burger-menu.open .line3 {
+  transform: rotate(45deg) translate(-10px, -9px);
+}
+
+/* Медиазапросы */
+@media (min-width: 930px) {
+  .burger-menu {
+    display: none;
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    height: auto;
+    background: none;
+    overflow: visible;
+  }
+}

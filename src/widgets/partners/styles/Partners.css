@@ -1,0 +1,35 @@
+.partners {
+  background-color: #ebebeb;
+  padding: 90px 0;
+}
+.wrapper-partner {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+.partners .img-box {
+  display: flex;
+  width: 255px;
+  height: 135px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--c4-color);
+}
+
+
+
+@media screen and (max-width: 1142px) {
+  .wrapper-partner {
+    grid-template-columns: repeat(2, 255px);
+    justify-content: center;
+  }
+  
+}
+
+@media screen and (max-width: 552px) {
+  .wrapper-partner {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  
+}

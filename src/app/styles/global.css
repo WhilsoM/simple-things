@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Ubuntu:wght@300&display=swap");
+@import './normalize.css';
+
+:root {
+  --gray-color: #4c5866;
+  --white-color: #fff;
+  --white-color-opacity-5: #bcbcbc;
+  --blue-color: #7875fe;
+  --666-color: #666;
+  --light-gray-color: #85859b;
+  --c4-color: #c4c4c4;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: var(--gray-color);
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1130px;
+  padding: 0 15px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex {
+  display: flex;
+}
+.items-end {
+  align-items: flex-end;
+}

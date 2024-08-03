@@ -1,0 +1,23 @@
+
+.btn {
+  display: flex;
+  padding: 20px 50px;
+  justify-content: center;
+  color: var(--blue-color);
+  font-size: 20px;
+  line-height: 29px;
+  border: 1px solid var(--blue-color);
+  background-color: var(--white-color);
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+    transition: opacity 0.3s ease-in-out;
+  }
+}
+
+@media screen and (max-width: 345px) {
+  .btn {
+    padding: 15px 30px;
+  }
+}

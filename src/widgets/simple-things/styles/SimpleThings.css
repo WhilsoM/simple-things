@@ -1,0 +1,33 @@
+.main {
+  margin-top: 130px;
+}
+.main .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-text {
+  margin-bottom: 30px;
+  max-width: 444px;
+  font-size: clamp(40px, 2rem, 60px);
+  font-weight: 400;
+  line-height: 100%;
+}
+.main-desc {
+  margin-bottom: 30px;
+  max-width: 445px;
+  height: 110px;
+  color: #85859b;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+@media screen and (max-width: 987px) {
+  .main {
+    margin: 50px 0;
+  }
+  .main-img {
+    display: none;
+  }
+}
