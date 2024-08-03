@@ -1,3 +1,5 @@
 import s from './styles/Button.module.css'
 
-export const Button = ({children}) => <button className={s.btn}>{children}</button>
+export const Button = ({children, onClick}) => (
+  <button className={s.btn} onClick={onClick} >{children}</button>
+)

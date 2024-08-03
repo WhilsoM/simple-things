@@ -2,7 +2,6 @@ import { ProductItem } from './components/ProductItem'
 import { data } from './data/data.js'
 import './styles/Cases.css'
 
-
 export const Cases = () => {
   return (
     <section className="cases">

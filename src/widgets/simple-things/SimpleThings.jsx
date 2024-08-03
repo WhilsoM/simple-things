@@ -1,8 +1,16 @@
-import React from 'react'
-import { Button } from '../../share/button/Button'
+import { Button } from '@share/button/Button'
+import { Modal } from '@share/modal/Modal'
+import { useState } from 'react'
 import './styles/SimpleThings.css'
 
 export const SimpleThings = () => {
+  const [isOpenModal, setIsOpenModal] = useState(false)
+
+  const handleClick = () => {
+    setIsOpenModal(true)
+    document.body.classList.add('overflow-y')
+  }
+
   return (
     <section className="main">
 			<div className="container">
@@ -12,7 +20,7 @@ export const SimpleThings = () => {
 						Бума́га (предположительно от итал. bombagia, первоисточником же
 						считается иранский) — волокнистый материал с минеральными добавками.
 					</p>
-					<Button children='Каталог' />
+					<Button children='Каталог' onClick={handleClick} />
 				</div>
 
 				<div className="main-img">
@@ -23,6 +31,15 @@ export const SimpleThings = () => {
 					/>
 				</div>
 			</div>
+      
+      {isOpenModal && 
+        <Modal 
+          isOpenModal={isOpenModal}
+          setIsOpenModal={setIsOpenModal}
+          title="test" 
+          description="lorem20" 
+        />
+      }
 		</section>
   )
 }
